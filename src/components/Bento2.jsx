@@ -3,6 +3,7 @@ import '../assets/Bento2.css';
 import { FaGithub } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { FaLinkedinIn } from "react-icons/fa";
+import { IoIosAdd } from "react-icons/io";
 import avatarImage from '/img/avatar.jpg';
 
 
@@ -21,13 +22,13 @@ const Bento2 = () => {
                     <p className="about"> Stage - Cinquieme Dimension </p>
                     <div className="stage">
                         <div className="firstexperience">
-                            ...
+                            Cinquieme Dimension
                         </div>
                         <div className="secondexperience">
-                            ...
+                            <IoIosAdd size={32} />
                         </div>
                         <div className="thirdexperience">
-                            ...
+                            <IoIosAdd size={32} />
                         </div>
                     </div>
                 </div>

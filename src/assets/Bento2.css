@@ -320,7 +320,6 @@
 }
 
 .bento2-wrapper .div2 .stage .firstexperience {
-  border: #000000 1px solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -328,10 +327,10 @@
   border-radius: 8px;
   width: 50%;
   height: 100%;
+  box-shadow: #e0d2d2 0 0 4px 2px;
 }
 
 .bento2-wrapper .div2 .stage .secondexperience {
-  border: #000000 1px solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -339,10 +338,10 @@
   border-radius: 8px;
   width: 50%;
   height: 100%;
+  box-shadow: #e0d2d2 0 0 4px 2px;
 }
 
 .bento2-wrapper .div2 .stage .thirdexperience {
-  border: #000000 1px solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -350,4 +349,5 @@
   border-radius: 8px;
   width: 50%;
   height: 100%;
+  box-shadow: #e0d2d2 0 0 4px 2px;
 }
