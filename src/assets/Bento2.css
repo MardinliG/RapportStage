@@ -18,10 +18,10 @@
 .bento2-wrapper .parent {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(9, 1fr); /* Ajouter une ligne supplémentaire */
   gap: 10px;
   width: 85%;
-  height: 85vh;
+  height: 95vh;
   background-color: #f0f0f0;
   padding: 10px;
   border-radius: 8px;
@@ -55,20 +55,20 @@
 }
 
 .bento2-wrapper .div2 { 
-  grid-area: 5 / 7 / 9 / 13; 
+  grid-area: 5 / 7 / 10 / 13; /* Étendre jusqu'à la ligne 10 au lieu de 9 */
   background-color: #ffffff;
   flex-direction: column;
   align-items: flex-start !important;
   text-align: left;
-  padding: 0px 10px 10px 10px;
+  padding: 0px 10px 0px 10px;
 }
 .bento2-wrapper .div3 { 
-  grid-area: 5 / 1 / 9 / 7; 
+  grid-area: 5 / 1 / 10 / 7; /* Étendre jusqu'à la ligne 10 au lieu de 9 */
   background-color: #ffffff;
   flex-direction: column;
   align-items: flex-start !important;
   text-align: left;
-  padding: 0px 10px 10px 10px;
+  padding: 0px 10px 0px 10px;
 }
 .bento2-wrapper .div4 { 
   grid-area: 1 / 1 / 5 / 5; 
@@ -128,14 +128,14 @@
 @media screen and (max-width: 768px) {
   .bento2-wrapper .parent {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr); /* Remettre à 12 */
     gap: 8px;
     padding: 8px;
   }
 
   .bento2-wrapper .div1 { grid-area: 4 / 5 / 7 / 7; }
-  .bento2-wrapper .div2 { grid-area: 7 / 4 / 11 / 7; }
-  .bento2-wrapper .div3 { grid-area: 7 / 1 / 11 / 4; }
+  .bento2-wrapper .div2 { grid-area: 7 / 4 / 11 / 7; } /* Remettre comme avant */
+  .bento2-wrapper .div3 { grid-area: 7 / 1 / 11 / 4; } /* Remettre comme avant */
   .bento2-wrapper .div4 { grid-area: 1 / 1 / 5 / 4; }
   .bento2-wrapper .div5 { grid-area: 5 / 1 / 7 / 5; }
   .bento2-wrapper .div6 { grid-area: 1 / 4 / 4 / 7; }
@@ -155,7 +155,7 @@
 @media screen and (max-width: 480px) {
   .bento2-wrapper .parent {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr); /* Remettre à 16 */
     gap: 6px;
     padding: 6px;
     height: auto;
@@ -163,8 +163,8 @@
   }
 
   .bento2-wrapper .div1 { grid-area: 5 / 1 / 7 / 4; }
-  .bento2-wrapper .div2 { grid-area: 7 / 1 / 10 / 4; }
-  .bento2-wrapper .div3 { grid-area: 10 / 1 / 13 / 4; }
+  .bento2-wrapper .div2 { grid-area: 7 / 1 / 10 / 4; } /* Remettre comme avant */
+  .bento2-wrapper .div3 { grid-area: 10 / 1 / 13 / 4; } /* Remettre comme avant */
   .bento2-wrapper .div4 { grid-area: 1 / 1 / 5 / 4; }
   .bento2-wrapper .div5 { grid-area: 13 / 1 / 15 / 4; }
   .bento2-wrapper .div6 { grid-area: 15 / 1 / 17 / 4; }
@@ -291,7 +291,7 @@
 
 .bento2-wrapper .div3 .caroussel {
   width: 100%;
-  height: 180px;
+  height: 75%;
   background-color: #f0f0f0;
   border-radius: 8px;
   display: flex;
@@ -308,11 +308,11 @@
 
 .bento2-wrapper .div2 .stage {
   width: 100%;
-  height: 180px;
+  height: 75%;
   border-radius: 8px;
   display: flex;
   justify-content: space-around;
-  gap: 10px;
+  gap: 15px;
 }
 .bento2-wrapper .div2 .about {
   font-size: x-small !important;
