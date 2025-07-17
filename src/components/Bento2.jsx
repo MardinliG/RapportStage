@@ -17,7 +17,11 @@ const Bento2 = () => {
                     </div>
                 </div>
                 <div className="div2"> My Stage </div>
-                <div className="div3"> My Works </div>
+                <div className="div3">
+                    <h2> My Works </h2>
+                    <p className="about"> Blog123 - Site about athlete interviews </p>
+                    <div className="caroussel"> Caroussel </div>
+                </div>
                 <div className="div4">
                     <img src={avatarImage} alt="Avatar" className="avatar"/>
                 </div>
