@@ -57,6 +57,10 @@
 .bento2-wrapper .div2 { 
   grid-area: 5 / 7 / 9 / 13; 
   background-color: #ffffff;
+  flex-direction: column;
+  align-items: flex-start !important;
+  text-align: left;
+  padding: 0px 10px 10px 10px;
 }
 .bento2-wrapper .div3 { 
   grid-area: 5 / 1 / 9 / 7; 
@@ -241,6 +245,16 @@
   font-weight: initial !important;
 }
 
+.bento2-wrapper .div2 h2 {
+  margin-top: 5px;
+  margin-bottom: 5px; 
+}
+.bento2-wrapper .div2 p {
+  margin: 0;
+  font-weight: initial !important;
+}
+
+
 .bento2-wrapper .div1 .button {
   display: inline-block;
   padding: 8px 16px;
@@ -290,4 +304,50 @@
 .bento2-wrapper .div3 .about {
   font-size: x-small !important;
   margin-bottom: 5px;
+}
+
+.bento2-wrapper .div2 .stage {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.bento2-wrapper .div2 .about {
+  font-size: x-small !important;
+  margin-bottom: 5px;
+}
+
+.bento2-wrapper .div2 .stage .firstexperience {
+  border: #000000 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  width: 50%;
+  height: 100%;
+}
+
+.bento2-wrapper .div2 .stage .secondexperience {
+  border: #000000 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  width: 50%;
+  height: 100%;
+}
+
+.bento2-wrapper .div2 .stage .thirdexperience {
+  border: #000000 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  width: 50%;
+  height: 100%;
 }

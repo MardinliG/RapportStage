@@ -16,7 +16,21 @@ const Bento2 = () => {
                         <a href="mailto:guillaume.mardinli@ynov.com" className="button">Contact Me !</a>
                     </div>
                 </div>
-                <div className="div2"> My Stage </div>
+                <div className="div2">
+                    <h2> Experiences </h2>
+                    <p className="about"> Stage - Cinquieme Dimension </p>
+                    <div className="stage">
+                        <div className="firstexperience">
+                            ...
+                        </div>
+                        <div className="secondexperience">
+                            ...
+                        </div>
+                        <div className="thirdexperience">
+                            ...
+                        </div>
+                    </div>
+                </div>
                 <div className="div3">
                     <h2> My Works </h2>
                     <p className="about"> Blog123 - Site about athlete interviews </p>
