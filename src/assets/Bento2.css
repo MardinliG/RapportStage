@@ -1,3 +1,7 @@
+body, html {
+  overflow: hidden; /* Desktop - pas de scroll */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -153,23 +157,35 @@
 }
 
 @media screen and (max-width: 480px) {
+  body, html {
+    overflow-x: hidden; /* Pas de scroll horizontal */
+    overflow-y: auto; /* Scroll vertical autorisé */
+  }
+  
+  .bento2-wrapper {
+    align-items: flex-start; /* Permet l'alignement en haut */
+    min-height: 100vh;
+  }
+
   .bento2-wrapper .parent {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(16, 1fr); /* Remettre à 16 */
+    grid-template-rows: repeat(19, 1fr); /* Augmenter pour avoir assez de lignes */
     gap: 6px;
     padding: 6px;
     height: auto;
     min-height: 100vh;
   }
 
-  .bento2-wrapper .div1 { grid-area: 5 / 1 / 7 / 4; }
-  .bento2-wrapper .div2 { grid-area: 7 / 1 / 10 / 4; } /* Remettre comme avant */
-  .bento2-wrapper .div3 { grid-area: 10 / 1 / 13 / 4; } /* Remettre comme avant */
-  .bento2-wrapper .div4 { grid-area: 1 / 1 / 5 / 4; }
-  .bento2-wrapper .div5 { grid-area: 13 / 1 / 15 / 4; }
-  .bento2-wrapper .div6 { grid-area: 15 / 1 / 17 / 4; }
+  /* NOUVEL ORDRE : div4 → div6 → div5 → div2 → div3 → div1 → div7 */
+  .bento2-wrapper .div4 { grid-area: 1 / 1 / 5 / 4; }    /* 1️⃣ Photo avatar */
+  .bento2-wrapper .div6 { grid-area: 5 / 1 / 7 / 4; }    /* 2️⃣ Hello Guillaume */
+  .bento2-wrapper .div5 { grid-area: 7 / 1 / 9 / 4; }    /* 3️⃣ About me */
+  .bento2-wrapper .div2 { grid-area: 9 / 1 / 12 / 4; }   /* 4️⃣ Experiences */
+  .bento2-wrapper .div3 { grid-area: 12 / 1 / 15 / 4; }  /* 5️⃣ My Works */
+  .bento2-wrapper .div1 { grid-area: 15 / 1 / 17 / 4; }  /* 6️⃣ Interested */
+  .bento2-wrapper .div7 { grid-area: 17 / 1 / 19 / 4; }  /* 7️⃣ Icônes sociales */
+
   .bento2-wrapper .div7 { 
-    grid-area: 17 / 1 / 19 / 4;
     flex-direction: row;
     gap: 3px;
   }
@@ -181,7 +197,7 @@
   .bento2-wrapper .div8, 
   .bento2-wrapper .div9, 
   .bento2-wrapper .div10 {
-    font-size: 8px;
+    font-size: 10px;
   }
 }
 
@@ -299,7 +315,6 @@
   align-items: center;
   font-size: 16px;
   color: #666;
-  border: #000000 1px solid;
 }
 .bento2-wrapper .div3 .about {
   font-size: x-small !important;

@@ -7,10 +7,12 @@ import Bento from './components/Bento';
 import Bento2 from './components/Bento2';
 
 function App() {
+
+  const hideNavbarRoutes = ["/bento2"]; // Routes where the navbar should be hidden
   return (
     <Router>
       <div>
-        <Navbar />
+        {!hideNavbarRoutes.includes(window.location.pathname) && <Navbar />}
         <main>
           <Routes>
             <Route path="/" element={<Presentation />} />
