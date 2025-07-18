@@ -1,13 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import '../assets/Bento2.css';
 import { FaGithub } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
 import avatarImage from '/img/avatar.jpg';
+import logo5D from '/img/logo5D.jpg';
 
 
 const Bento2 = () => {
+    const navigate = useNavigate();
+
+    const handleClick = (url) => {
+        navigate(url);
+    };
     return (
         <div className="bento2-wrapper">
             <div className="parent">
@@ -21,20 +28,20 @@ const Bento2 = () => {
                     <h2> Experiences </h2>
                     <p className="about"> Stage - Cinquieme Dimension </p>
                     <div className="stage">
-                        <div className="firstexperience">
-                            Cinquieme Dimension
+                        <div className="firstexperience" onClick={() => handleClick('/5dimension')}>
+                            <img src={logo5D} alt="Logo 5D" className="logo5D" />
                         </div>
-                        <div className="secondexperience">
+                        <div className="secondexperience" onClick={() => handleClick('/bento')}>
                             <IoIosAdd size={32} />
                         </div>
-                        <div className="thirdexperience">
+                        <div className="thirdexperience" onClick={() => handleClick('/bento3')}>
                             <IoIosAdd size={32} />
                         </div>
                     </div>
                 </div>
                 <div className="div3">
                     <h2> My Works </h2>
-                    <p className="about"> Blog123 - Site about athlete interviews </p>
+                    <p className="about"> Blog123 - Site about athletes interviews </p>
                     <div className="caroussel"> Caroussel </div>
                 </div>
                 <div className="div4">

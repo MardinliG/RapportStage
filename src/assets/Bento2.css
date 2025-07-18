@@ -165,6 +165,7 @@ body, html {
   .bento2-wrapper {
     align-items: flex-start; /* Permet l'alignement en haut */
     min-height: 100vh;
+    padding: 10px;
   }
 
   .bento2-wrapper .parent {
@@ -174,6 +175,7 @@ body, html {
     padding: 6px;
     height: auto;
     min-height: 100vh;
+    width: 100%;
   }
 
   /* NOUVEL ORDRE : div4 → div6 → div5 → div2 → div3 → div1 → div7 */
@@ -305,6 +307,13 @@ body, html {
   border-radius: 8px;
 }
 
+.bento2-wrapper .logo5D {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 .bento2-wrapper .div3 .caroussel {
   width: 100%;
   height: 75%;
@@ -338,11 +347,12 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   border-radius: 8px;
   width: 50%;
   height: 100%;
   box-shadow: #e0d2d2 0 0 4px 2px;
+  cursor: pointer;
 }
 
 .bento2-wrapper .div2 .stage .secondexperience {
@@ -354,6 +364,7 @@ body, html {
   width: 50%;
   height: 100%;
   box-shadow: #e0d2d2 0 0 4px 2px;
+  cursor: pointer;
 }
 
 .bento2-wrapper .div2 .stage .thirdexperience {
@@ -365,4 +376,5 @@ body, html {
   width: 50%;
   height: 100%;
   box-shadow: #e0d2d2 0 0 4px 2px;
+  cursor: pointer;
 }
