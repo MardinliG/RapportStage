@@ -51,7 +51,7 @@ const Bento2 = () => {
                     </div>
                 </div>
                 <div className="div3">
-                    <h2> My Works </h2>
+                    <h2> Last Works </h2>
                     <p className="about"> Blog123 - Site about athletes interviews </p>
                     <div className="caroussel"> Caroussel </div>
                 </div>
@@ -78,21 +78,17 @@ const Bento2 = () => {
                     </div>
                 </div>
                 
-                {/* Modal avec affichage conditionnel */}
                 {modalVisible && (
                     <div className="modal-overlay" onClick={hideModal}>
                         <div className="modal" onClick={(e) => e.stopPropagation()}>
-                            {/* Bouton close en haut à droite */}
                             <a onClick={hideModal} className="close-button">
                                 <IoIosClose size={32} />
                             </a>
-                            
-                            {/* Contenu de la modal */}
                             <div className="modal-content">
-                                <h3>Next Experience</h3>
-                                <p>Expérience bientôt disponible !</p>
+                                <h3>Not Yet ...</h3>
+                                <p>You could be the <strong>Next One</strong> !</p> {/* mettre des majuscules et jouer avec le gras */}
                                 <div className="button-container">
-                                    <a href="mailto:guillaume.mardinli@ynov.com" className="button">Contact Me !</a>
+                                    <a href="mailto:guillaume.mardinli@ynov.com" className="button">Let's talk - Contact Me!</a>
                                 </div>
                             </div>
                         </div>
