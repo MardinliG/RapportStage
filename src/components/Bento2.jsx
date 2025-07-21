@@ -1,20 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '../assets/Bento2.css';
 import { FaGithub } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
+import { IoIosClose } from "react-icons/io";
 import avatarImage from '/img/avatar.jpg';
 import logo5D from '/img/logo5D.jpg';
 
 
 const Bento2 = () => {
     const navigate = useNavigate();
+    const [modalVisible, setModalVisible] = useState(false);
 
     const handleClick = (url) => {
         navigate(url);
     };
+
+    const showModal = () => {
+        setModalVisible(true);
+    };
+
+    const hideModal = () => {
+        setModalVisible(false);
+    };
+
     return (
         <div className="bento2-wrapper">
             <div className="parent">
@@ -31,10 +42,10 @@ const Bento2 = () => {
                         <div className="firstexperience" onClick={() => handleClick('/5dimension')}>
                             <img src={logo5D} alt="Logo 5D" className="logo5D" />
                         </div>
-                        <div className="secondexperience" onClick={() => handleClick('/bento')}>
+                        <div className="secondexperience" onClick={showModal}>
                             <IoIosAdd size={32} />
                         </div>
-                        <div className="thirdexperience" onClick={() => handleClick('/bento3')}>
+                        <div className="thirdexperience" onClick={showModal}>
                             <IoIosAdd size={32} />
                         </div>
                     </div>
@@ -66,6 +77,27 @@ const Bento2 = () => {
                         <a href="https://fr.linkedin.com/in/guillaume-mardinli-1212b1269" className="icon" target="_blank"> <FaLinkedinIn size={32} /> </a>
                     </div>
                 </div>
+                
+                {/* Modal avec affichage conditionnel */}
+                {modalVisible && (
+                    <div className="modal-overlay" onClick={hideModal}>
+                        <div className="modal" onClick={(e) => e.stopPropagation()}>
+                            {/* Bouton close en haut à droite */}
+                            <a onClick={hideModal} className="close-button">
+                                <IoIosClose size={32} />
+                            </a>
+                            
+                            {/* Contenu de la modal */}
+                            <div className="modal-content">
+                                <h3>Next Experience</h3>
+                                <p>Expérience bientôt disponible !</p>
+                                <div className="button-container">
+                                    <a href="mailto:guillaume.mardinli@ynov.com" className="button">Contact Me !</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );
