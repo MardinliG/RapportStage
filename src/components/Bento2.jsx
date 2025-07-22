@@ -76,7 +76,16 @@ const Bento2 = () => {
                     <p className="about">
                         {works[currentWork]?.name} - {works[currentWork]?.description}
                     </p>
-                    <div className="caroussel">
+                    <div className="caroussel"
+                        onClick={() => {
+                            if (works.length > 0 && works[currentWork].link) {
+                                window.open(works[currentWork].link, "_blank");
+                            }
+                        }}
+                        style={{
+                            cursor: works.length > 0 && works[currentWork].link ? "pointer" : "default"
+                        }}
+                    >
                         {works.length > 0 && (
                             <img
                                 src={works[currentWork].image}
