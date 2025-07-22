@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import '../assets/Bento2.css';
 import { FaGithub } from "react-icons/fa";
@@ -13,6 +13,26 @@ import logo5D from '/img/logo5D.jpg';
 const Bento2 = () => {
     const navigate = useNavigate();
     const [modalVisible, setModalVisible] = useState(false);
+    const [works, setWorks] = useState([]);
+    const [currentWork, setCurrentWork] = useState(0);
+
+    useEffect(() => {
+        fetch("https://127.0.0.1:8000/api/works")
+            .then(res => res.json())
+            .then(data => setWorks(data))
+            .catch(err => console.error(err));
+    }, []);
+
+    // Carrousel automatique
+    useEffect(() => {
+        if (works.length === 0) return;
+        const interval = setInterval(() => {
+            setCurrentWork(prev =>
+                prev + 1 < works.length ? prev + 1 : 0
+            );
+        }, 8000); // Change toutes les 8 secondes
+        return () => clearInterval(interval);
+    }, [works]);
 
     const handleClick = (url) => {
         navigate(url);
@@ -52,8 +72,21 @@ const Bento2 = () => {
                 </div>
                 <div className="div3">
                     <h2> Last Works </h2>
-                    <p className="about"> Blog123 - Site about athletes interviews </p>
-                    <div className="caroussel"> Caroussel </div>
+                    <p className="about">
+                        {works[currentWork]?.name} - {works[currentWork]?.description}
+                    </p>
+                    <div className="caroussel">
+                        {works.length > 0 && (
+                            <img
+                                src={works[currentWork].image}
+                                alt={works[currentWork].name}
+                                style={{
+                                    width: "120px",
+                                    borderRadius: "12px"
+                                }}
+                            />
+                        )}
+                    </div>
                 </div>
                 <div className="div4">
                     <img src={avatarImage} alt="Avatar" className="avatar"/>
