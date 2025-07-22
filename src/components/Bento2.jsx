@@ -15,9 +15,10 @@ const Bento2 = () => {
     const [modalVisible, setModalVisible] = useState(false);
     const [works, setWorks] = useState([]);
     const [currentWork, setCurrentWork] = useState(0);
+    const apiUrl = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
-        fetch("https://127.0.0.1:8000/api/works")
+        fetch(`${apiUrl}/api/works`)
             .then(res => res.json())
             .then(data => setWorks(data))
             .catch(err => console.error(err));
