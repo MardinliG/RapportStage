@@ -54,7 +54,7 @@ body, html {
 .bento2-wrapper .div1 .button-container {
   width: 100%;
   display: flex;
-  justify-content: center; 
+  justify-content: end; 
   margin-top: 25px;
 }
 
@@ -83,16 +83,18 @@ body, html {
   background-color: #ffffff;
   flex-direction: column;
   align-items: flex-start !important;
+  justify-content: start !important;
   text-align: left;
-  padding: 0px 10px 10px 10px;
+  padding: 30px 10px 10px 10px;
 }
 .bento2-wrapper .div6 { 
   grid-area: 1 / 5 / 3 / 10; 
   background-color: #ffffff;
   flex-direction: column;
   align-items: flex-start !important;
+  justify-content: start !important;
   text-align: left;
-  padding: 0px 10px 10px 10px;
+  padding: 30px 10px 10px 10px;
 }
 .bento2-wrapper .div7 { 
   grid-area: 1 / 10 / 2 / 13; 
@@ -238,20 +240,22 @@ body, html {
 
 .bento2-wrapper .div6 h2 {
     margin: 0;
-  margin-bottom: 10px; 
+    margin-bottom: 20px; 
 }
 .bento2-wrapper .div6 p {
   margin: 0;
   font-weight: initial !important;
+  font-size: small;
 }
 
 .bento2-wrapper .div5 h2 {
   margin: 0;
-  margin-bottom: 10px; 
+  margin-bottom: 20px; 
 }
 .bento2-wrapper .div5 p {
   margin: 0;
   font-weight: initial !important;
+  font-size: small;
 }
 
 .bento2-wrapper .div3 h2 {

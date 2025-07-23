@@ -103,11 +103,11 @@ const Bento2 = () => {
                 </div>
                 <div className="div5">
                     <h2> About me </h2>
-                    <p> Lorem Ipsum Quid enim tam absurdum quam delectari multis inanimis </p>
+                    <p> Driven by curiosity and a passion for technology, I’m actively looking for a work-study position in web development where I can apply my skills and continue growing within a dynamic team.  </p>
                 </div>
                 <div className="div6">
                     <h2> Hello ! I'm Guillaume <span className="hand">👋</span> </h2>
-                    <p> Lorem Ipsum Quid enim tam absurdum quam delectari multis inanimis </p>
+                    <p> A junior web developer based in Toulouse, currently pursuing a Bachelor's degree in Computer Science at Ynov Campus. I'm in my third year, aiming to become a software development expert upon graduation. </p>
                 </div>
                 <div className="div7">
                     <div className="div8">
