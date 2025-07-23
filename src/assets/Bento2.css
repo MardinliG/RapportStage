@@ -382,6 +382,12 @@ body, html {
   cursor: pointer;
 }
 
+.bento2-wrapper .div2 .stage .firstexperience:hover,
+.bento2-wrapper .div2 .stage .secondexperience:hover,
+.bento2-wrapper .div2 .stage .thirdexperience:hover {
+  box-shadow: #b7c2ce 0 0 4px 2px;
+}
+
 .modal-overlay {
     position: fixed;
     top: 0;
