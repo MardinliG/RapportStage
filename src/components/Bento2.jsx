@@ -15,12 +15,18 @@ const Bento2 = () => {
     const [modalVisible, setModalVisible] = useState(false);
     const [works, setWorks] = useState([]);
     const [currentWork, setCurrentWork] = useState(0);
+    const [experiences, setExperiences] = useState([]);
     const apiUrl = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
         fetch(`${apiUrl}/api/works`)
             .then(res => res.json())
             .then(data => setWorks(data))
+            .catch(err => console.error(err));
+
+        fetch(`${apiUrl}/api/experiences`)
+            .then(res => res.json())
+            .then(data => setExperiences(data))
             .catch(err => console.error(err));
     }, []);
 
@@ -36,7 +42,9 @@ const Bento2 = () => {
     }, [works]);
 
     const handleClick = (url) => {
-        navigate(url);
+        if (url) {
+            window.open(url, "_blank");
+        }
     };
 
     const showModal = () => {
@@ -58,9 +66,9 @@ const Bento2 = () => {
                 </div>
                 <div className="div2">
                     <h2> Experiences </h2>
-                    <p className="about"> Stage - Cinquieme Dimension </p>
+                    <p className="about"> {experiences[1]?.contrat} - {experiences[0]?.name} </p>
                     <div className="stage">
-                        <div className="firstexperience" onClick={() => handleClick('/5dimension')}>
+                        <div className="firstexperience" onClick={() => handleClick(experiences[0]?.link)}>
                             <img src={logo5D} alt="Logo 5D" className="logo5D" />
                         </div>
                         <div className="secondexperience" onClick={showModal}>

@@ -86,6 +86,7 @@ body, html {
   justify-content: start !important;
   text-align: left;
   padding: 30px 10px 10px 10px;
+  min-height: 160px;
 }
 .bento2-wrapper .div6 { 
   grid-area: 1 / 5 / 3 / 10; 
@@ -95,6 +96,7 @@ body, html {
   justify-content: start !important;
   text-align: left;
   padding: 30px 10px 10px 10px;
+  min-height: 160px;
 }
 .bento2-wrapper .div7 { 
   grid-area: 1 / 10 / 2 / 13; 
@@ -240,7 +242,7 @@ body, html {
 
 .bento2-wrapper .div6 h2 {
     margin: 0;
-    margin-bottom: 20px; 
+    margin-bottom: clamp(12px, 1.2vw, 32px); /* adaptatif selon la largeur de l'écran */
 }
 .bento2-wrapper .div6 p {
   margin: 0;
@@ -250,7 +252,7 @@ body, html {
 
 .bento2-wrapper .div5 h2 {
   margin: 0;
-  margin-bottom: 20px; 
+  margin-bottom: clamp(12px, 1.2vw, 32px); /* adaptatif selon la largeur de l'écran */
 }
 .bento2-wrapper .div5 p {
   margin: 0;
