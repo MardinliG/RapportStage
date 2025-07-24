@@ -69,7 +69,7 @@ const Bento2 = () => {
                     <p className="about"> {experiences[1]?.contrat} - {experiences[0]?.name} </p>
                     <div className="stage">
                         <div className="firstexperience" onClick={() => handleClick(experiences[0]?.link)}>
-                            <img src={logo5D} alt="Logo 5D" className="logo5D" />
+                            <img src={experiences[0]?.image} alt="Logo 5D" className="logo5D" />
                         </div>
                         <div className="secondexperience" onClick={showModal}>
                             <IoIosAdd size={32} />
