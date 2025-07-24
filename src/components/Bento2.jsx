@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import LoadingScreen from "./LoadingScreen";
 import { useNavigate } from "react-router-dom";
 import '../assets/Bento2.css';
 import { FaGithub } from "react-icons/fa";
@@ -17,17 +18,27 @@ const Bento2 = () => {
     const [currentWork, setCurrentWork] = useState(0);
     const [experiences, setExperiences] = useState([]);
     const apiUrl = import.meta.env.VITE_API_URL;
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`${apiUrl}/api/works`)
-            .then(res => res.json())
-            .then(data => setWorks(data))
-            .catch(err => console.error(err));
+        const MIN_LOADING_TIME = 1200;
+        const start = Date.now();
 
-        fetch(`${apiUrl}/api/experiences`)
-            .then(res => res.json())
-            .then(data => setExperiences(data))
-            .catch(err => console.error(err));
+        Promise.all([
+            fetch(`${apiUrl}/api/works`).then(res => res.json()),
+            fetch(`${apiUrl}/api/experiences`).then(res => res.json())
+        ])
+        .then(([worksData, experiencesData]) => {
+            setWorks(worksData);
+            setExperiences(experiencesData);
+            const elapsed = Date.now() - start;
+            const remaining = MIN_LOADING_TIME - elapsed;
+            setTimeout(() => setLoading(false), remaining > 0 ? remaining : 0);
+        })
+        .catch(err => {
+            console.error(err);
+            setLoading(false);
+        });
     }, []);
 
     // Carrousel automatique
@@ -54,6 +65,14 @@ const Bento2 = () => {
     const hideModal = () => {
         setModalVisible(false);
     };
+
+    if (loading) {
+        return <LoadingScreen />;
+    }   
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 
     return (
         <div className="bento2-wrapper">
