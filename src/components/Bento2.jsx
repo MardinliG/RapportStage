@@ -77,12 +77,16 @@ const Bento2 = () => {
     return (
         <div className="bento2-wrapper">
             <div className="parent">
+
+                {/* ---------------------- DIV 1 INTERESTED ---------------------- */}
                 <div className="div1">
                     <h2>You are <br /> interested ?</h2>
                     <div className="button-container">
                         <a href="mailto:guillaume.mardinli@ynov.com" className="button">Contact Me !</a>
                     </div>
                 </div>
+
+                {/* ---------------------- DIV 2 EXPERIENCES ---------------------- */}
                 <div className="div2">
                     <h2> Experiences </h2>
                     <p className="about"> {experiences[0]?.contrat} - {experiences[0]?.name} </p>
@@ -98,6 +102,8 @@ const Bento2 = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* ---------------------- DIV 3 LAST WORKS ---------------------- */}
                 <div className="div3">
                     <h2> Last Works </h2>
                     <p className="about">
@@ -125,17 +131,25 @@ const Bento2 = () => {
                         )}
                     </div>
                 </div>
+
+                {/* ---------------------- DIV 4 AVATAR ---------------------- */}
                 <div className="div4">
                     <img src={avatarImage} alt="Avatar" className="avatar"/>
                 </div>
+
+                {/* ---------------------- DIV 5 ABOUT ME ---------------------- */}
                 <div className="div5">
                     <h2> About me </h2>
                     <p> Driven by curiosity and a passion for technology, I’m actively looking for a work-study position in web development where I can apply my skills and continue growing within a dynamic team.  </p>
                 </div>
+
+                {/* ---------------------- DIV 6 HELLO GUILLAUME ---------------------- */}
                 <div className="div6">
                     <h2> Hello ! I'm Guillaume <span className="hand">👋</span> </h2>
                     <p> A junior web developer based in Toulouse, currently pursuing a Bachelor's degree in Computer Science at Ynov Campus. I'm in my third year, aiming to become a software development expert upon graduation. </p>
                 </div>
+
+                {/* ---------------------- DIV 7 SOCIAL ICONS ---------------------- */}
                 <div className="div7">
                     <div className="div8">
                         <a href="https://github.com/MardinliG" className="icon" target="_blank"> <FaGithub size={32} /> </a>
@@ -147,7 +161,8 @@ const Bento2 = () => {
                         <a href="https://fr.linkedin.com/in/guillaume-mardinli-1212b1269" className="icon" target="_blank"> <FaLinkedinIn size={32} /> </a>
                     </div>
                 </div>
-                
+
+                {/* ---------------------- MODAL ---------------------- */}
                 {modalVisible && (
                     <div className="modal-overlay" onClick={hideModal}>
                         <div className="modal" onClick={(e) => e.stopPropagation()}>
@@ -156,7 +171,7 @@ const Bento2 = () => {
                             </a>
                             <div className="modal-content">
                                 <h3>Not Yet ...</h3>
-                                <p>You could be the <strong>Next One</strong> !</p> {/* mettre des majuscules et jouer avec le gras */}
+                                <p>You could be the <strong>Next One</strong> !</p>
                                 <div className="button-container">
                                     <a href="mailto:guillaume.mardinli@ynov.com" className="button">Let's talk - Contact Me!</a>
                                 </div>
@@ -164,6 +179,7 @@ const Bento2 = () => {
                         </div>
                     </div>
                 )}
+
             </div>
         </div>
     );

@@ -1,11 +1,17 @@
+/* ===========================
+   RESET & GLOBAL
+   =========================== */
 body, html {
   overflow: hidden; /* Desktop - pas de scroll */
 }
-
-* {
+*,
+.bento2-wrapper * {
   box-sizing: border-box;
 }
 
+/* ===========================
+   WRAPPER & GRID
+   =========================== */
 .bento2-wrapper {
   display: flex;
   justify-content: center;
@@ -15,14 +21,10 @@ body, html {
   padding: 20px;
 }
 
-.bento2-wrapper * {
-  box-sizing: border-box;
-}
-
 .bento2-wrapper .parent {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(9, 1fr); /* Ajouter une ligne supplémentaire */
+  grid-template-rows: repeat(9, 1fr);
   gap: 10px;
   width: 85%;
   height: 95vh;
@@ -41,6 +43,9 @@ body, html {
   font-size: 16px;
 }
 
+/* ===========================
+   DIV 1 : INTERESTED
+   =========================== */
 .bento2-wrapper .div1 { 
   grid-area: 2 / 10 / 5 / 13; 
   background-color: #ffffff;
@@ -50,235 +55,12 @@ body, html {
   justify-content: flex-start !important;
   padding: 10px;
 }
-
 .bento2-wrapper .div1 .button-container {
   width: 100%;
   display: flex;
   justify-content: end; 
   margin-top: 25px;
 }
-
-.bento2-wrapper .div2 { 
-  grid-area: 5 / 7 / 10 / 13; /* Étendre jusqu'à la ligne 10 au lieu de 9 */
-  background-color: #ffffff;
-  flex-direction: column;
-  align-items: flex-start !important;
-  text-align: left;
-  padding: 0px 10px 0px 10px;
-}
-.bento2-wrapper .div3 { 
-  grid-area: 5 / 1 / 10 / 7; /* Étendre jusqu'à la ligne 10 au lieu de 9 */
-  background-color: #ffffff;
-  flex-direction: column;
-  align-items: flex-start !important;
-  text-align: left;
-  padding: 0px 10px 0px 10px;
-}
-.bento2-wrapper .div4 { 
-  grid-area: 1 / 1 / 5 / 5; 
-  background-color: #ffffff;
-}
-.bento2-wrapper .div5 { 
-  grid-area: 3 / 5 / 5 / 10; 
-  background-color: #ffffff;
-  flex-direction: column;
-  align-items: flex-start !important;
-  justify-content: start !important;
-  text-align: left;
-  padding: 30px 10px 10px 10px;
-  min-height: 160px;
-}
-.bento2-wrapper .div6 { 
-  grid-area: 1 / 5 / 3 / 10; 
-  background-color: #ffffff;
-  flex-direction: column;
-  align-items: flex-start !important;
-  justify-content: start !important;
-  text-align: left;
-  padding: 30px 10px 10px 10px;
-  min-height: 160px;
-}
-.bento2-wrapper .div7 { 
-  grid-area: 1 / 10 / 2 / 13; 
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px;    
-}
-
-.bento2-wrapper .div8, 
-.bento2-wrapper .div9, 
-.bento2-wrapper .div10 {
-  width: 75px;
-  height: 75px;
-  flex: none;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  color: rgb(0, 0, 0);
-}
-
-.bento2-wrapper .div8 { 
-  background-color: #ffffff;
-  margin-right: auto;
-}
-.bento2-wrapper .div9 { 
-  background-color: #ffffff;
-}
-.bento2-wrapper .div10 { 
-  background-color: #ffffff;
-  margin-left: auto;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .bento2-wrapper .parent {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(12, 1fr); /* Remettre à 12 */
-    gap: 8px;
-    padding: 8px;
-  }
-
-  .bento2-wrapper .div1 { grid-area: 4 / 5 / 7 / 7; }
-  .bento2-wrapper .div2 { grid-area: 7 / 4 / 11 / 7; } /* Remettre comme avant */
-  .bento2-wrapper .div3 { grid-area: 7 / 1 / 11 / 4; } /* Remettre comme avant */
-  .bento2-wrapper .div4 { grid-area: 1 / 1 / 5 / 4; }
-  .bento2-wrapper .div5 { grid-area: 5 / 1 / 7 / 5; }
-  .bento2-wrapper .div6 { grid-area: 1 / 4 / 4 / 7; }
-  .bento2-wrapper .div7 { grid-area: 11 / 1 / 13 / 7; }
-
-  .bento2-wrapper .parent > div {
-    font-size: 14px;
-  }
-
-  .bento2-wrapper .div8, 
-  .bento2-wrapper .div9, 
-  .bento2-wrapper .div10 {
-    font-size: 10px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  body, html {
-    overflow-x: hidden; /* Pas de scroll horizontal */
-    overflow-y: auto; /* Scroll vertical autorisé */
-  }
-  
-  .bento2-wrapper {
-    align-items: flex-start; /* Permet l'alignement en haut */
-    min-height: 100vh;
-    padding: 10px;
-  }
-
-  .bento2-wrapper .parent {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(19, 1fr); /* Augmenter pour avoir assez de lignes */
-    gap: 6px;
-    padding: 6px;
-    height: auto;
-    min-height: 100vh;
-    width: 100%;
-  }
-
-  /* NOUVEL ORDRE : div4 → div6 → div5 → div2 → div3 → div1 → div7 */
-  .bento2-wrapper .div4 { grid-area: 1 / 1 / 5 / 4; }    /* 1️⃣ Photo avatar */
-  .bento2-wrapper .div6 { grid-area: 5 / 1 / 7 / 4; }    /* 2️⃣ Hello Guillaume */
-  .bento2-wrapper .div5 { grid-area: 7 / 1 / 9 / 4; }    /* 3️⃣ About me */
-  .bento2-wrapper .div2 { grid-area: 9 / 1 / 12 / 4; }   /* 4️⃣ Experiences */
-  .bento2-wrapper .div3 { grid-area: 12 / 1 / 15 / 4; }  /* 5️⃣ My Works */
-  .bento2-wrapper .div1 { grid-area: 15 / 1 / 17 / 4; }  /* 6️⃣ Interested */
-  .bento2-wrapper .div7 { grid-area: 17 / 1 / 19 / 4; }  /* 7️⃣ Icônes sociales */
-
-  .bento2-wrapper .div7 { 
-    flex-direction: row;
-    gap: 3px;
-  }
-
-  .bento2-wrapper .parent > div {
-    font-size: 12px;
-  }
-
-  .bento2-wrapper .div8, 
-  .bento2-wrapper .div9, 
-  .bento2-wrapper .div10 {
-    font-size: 10px;
-  }
-}
-
-.bento2-wrapper .div6 .hand {
-    display: inline-block;
-    animation: bento2_div6_hand 3s infinite;
-    animation-delay: 2s
-}
-
-@keyframes bento2_div6_hand {
-    0% {
-        transform: rotate(0deg)
-    }
-
-    10% {
-        transform: rotate(20deg)
-    }
-
-    15% {
-        transform: rotate(-15deg)
-    }
-
-    20% {
-        transform: rotate(20deg)
-    }
-
-    30% {
-        transform: rotate(0deg)
-    }
-
-    100% {
-        transform: rotate(0deg)
-    }
-
-}
-
-.bento2-wrapper .div6 h2 {
-    margin: 0;
-    margin-bottom: clamp(12px, 1.2vw, 32px); /* adaptatif selon la largeur de l'écran */
-}
-.bento2-wrapper .div6 p {
-  margin: 0;
-  font-weight: initial !important;
-  font-size: small;
-}
-
-.bento2-wrapper .div5 h2 {
-  margin: 0;
-  margin-bottom: clamp(12px, 1.2vw, 32px); /* adaptatif selon la largeur de l'écran */
-}
-.bento2-wrapper .div5 p {
-  margin: 0;
-  font-weight: initial !important;
-  font-size: small;
-}
-
-.bento2-wrapper .div3 h2 {
-  margin-top: 5px;
-  margin-bottom: 5px; 
-}
-.bento2-wrapper .div3 p {
-  margin: 0;
-  font-weight: initial !important;
-}
-
-.bento2-wrapper .div2 h2 {
-  margin-top: 5px;
-  margin-bottom: 5px; 
-}
-.bento2-wrapper .div2 p {
-  margin: 0;
-  font-weight: initial !important;
-}
-
-
 .bento2-wrapper .div1 .button {
   display: inline-block;
   padding: 8px 16px;
@@ -294,31 +76,89 @@ body, html {
   margin: 0; 
   text-decoration: none;
 }
-
 .bento2-wrapper .div1 .button:hover {
   color: #b7c2ce;
 }
 
-.bento2-wrapper .icon {
-  color: #000000;
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* ===========================
+   DIV 2 : EXPERIENCES
+   =========================== */
+.bento2-wrapper .div2 { 
+  grid-area: 5 / 7 / 10 / 13;
+  background-color: #ffffff;
+  flex-direction: column;
+  align-items: flex-start !important;
+  text-align: left;
+  padding: 0px 10px 0px 10px;
 }
-
-.bento2-wrapper .avatar {
+.bento2-wrapper .div2 h2 {
+  margin-top: 5px;
+  margin-bottom: 5px; 
+}
+.bento2-wrapper .div2 p {
+  margin: 0;
+  font-weight: initial !important;
+}
+.bento2-wrapper .div2 .about {
+  font-size: x-small !important;
+  margin-bottom: 5px;
+}
+.bento2-wrapper .div2 .stage {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 75%;
   border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+.bento2-wrapper .div2 .stage .firstexperience,
+.bento2-wrapper .div2 .stage .secondexperience,
+.bento2-wrapper .div2 .stage .thirdexperience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  width: 50%;
+  height: 100%;
+  box-shadow: #e0d2d2 0 0 4px 2px;
+  cursor: pointer;
+}
+.bento2-wrapper .div2 .stage .firstexperience {
+  background-color: #ffffff;
+}
+.bento2-wrapper .div2 .stage .secondexperience,
+.bento2-wrapper .div2 .stage .thirdexperience {
+  background-color: #f0f0f0;
+}
+.bento2-wrapper .div2 .stage .firstexperience:hover,
+.bento2-wrapper .div2 .stage .secondexperience:hover,
+.bento2-wrapper .div2 .stage .thirdexperience:hover {
+  box-shadow: #b7c2ce 0 0 4px 2px;
 }
 
-.bento2-wrapper .logo5D {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
+/* ===========================
+   DIV 3 : LAST WORKS
+   =========================== */
+.bento2-wrapper .div3 { 
+  grid-area: 5 / 1 / 10 / 7;
+  background-color: #ffffff;
+  flex-direction: column;
+  align-items: flex-start !important;
+  text-align: left;
+  padding: 0px 10px 0px 10px;
 }
-
+.bento2-wrapper .div3 h2 {
+  margin-top: 5px;
+  margin-bottom: 5px; 
+}
+.bento2-wrapper .div3 p {
+  margin: 0;
+  font-weight: initial !important;
+}
+.bento2-wrapper .div3 .about {
+  font-size: x-small !important;
+  margin-bottom: 5px;
+}
 .bento2-wrapper .div3 .caroussel {
   width: 100%;
   height: 75%;
@@ -330,125 +170,234 @@ body, html {
   font-size: 16px;
   color: #666;
 }
-.bento2-wrapper .div3 .about {
-  font-size: x-small !important;
-  margin-bottom: 5px;
-}
 
-.bento2-wrapper .div2 .stage {
-  width: 100%;
-  height: 75%;
-  border-radius: 8px;
-  display: flex;
-  justify-content: space-around;
-  gap: 15px;
-}
-.bento2-wrapper .div2 .about {
-  font-size: x-small !important;
-  margin-bottom: 5px;
-}
-
-.bento2-wrapper .div2 .stage .firstexperience {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* ===========================
+   DIV 4 : AVATAR
+   =========================== */
+.bento2-wrapper .div4 { 
+  grid-area: 1 / 1 / 5 / 5; 
   background-color: #ffffff;
-  border-radius: 8px;
-  width: 50%;
+}
+.bento2-wrapper .avatar {
+  width: 100%;
   height: 100%;
-  box-shadow: #e0d2d2 0 0 4px 2px;
-  cursor: pointer;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-.bento2-wrapper .div2 .stage .secondexperience {
-  display: flex;
-  justify-content: center;
+/* ===========================
+   DIV 5 : ABOUT ME
+   =========================== */
+.bento2-wrapper .div5 { 
+  grid-area: 3 / 5 / 5 / 10; 
+  background-color: #ffffff;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: start !important;
+  text-align: left;
+  padding: 30px 10px 10px 10px;
+  min-height: 160px;
+}
+.bento2-wrapper .div5 h2 {
+  margin: 0;
+  margin-bottom: clamp(12px, 1.2vw, 32px);
+}
+.bento2-wrapper .div5 p {
+  margin: 0;
+  font-weight: initial !important;
+  font-size: small;
+}
+
+/* ===========================
+   DIV 6 : HELLO GUILLAUME
+   =========================== */
+.bento2-wrapper .div6 { 
+  grid-area: 1 / 5 / 3 / 10; 
+  background-color: #ffffff;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: start !important;
+  text-align: left;
+  padding: 30px 10px 10px 10px;
+  min-height: 160px;
+}
+.bento2-wrapper .div6 h2 {
+  margin: 0;
+  margin-bottom: clamp(12px, 1.2vw, 32px);
+}
+.bento2-wrapper .div6 p {
+  margin: 0;
+  font-weight: initial !important;
+  font-size: small;
+}
+.bento2-wrapper .div6 .hand {
+  display: inline-block;
+  animation: bento2_div6_hand 3s infinite;
+  animation-delay: 2s
+}
+@keyframes bento2_div6_hand {
+  0% { transform: rotate(0deg) }
+  10% { transform: rotate(20deg) }
+  15% { transform: rotate(-15deg) }
+  20% { transform: rotate(20deg) }
+  30% { transform: rotate(0deg) }
+  100% { transform: rotate(0deg) }
+}
+
+/* ===========================
+   DIV 7 : SOCIAL ICONS
+   =========================== */
+.bento2-wrapper .div7 { 
+  grid-area: 1 / 10 / 2 / 13; 
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  width: 50%;
-  height: 100%;
-  box-shadow: #e0d2d2 0 0 4px 2px;
-  cursor: pointer;
+  padding: 0px;    
 }
-
-.bento2-wrapper .div2 .stage .thirdexperience {
+.bento2-wrapper .div8, 
+.bento2-wrapper .div9, 
+.bento2-wrapper .div10 {
+  width: 75px;
+  height: 75px;
+  flex: none;
+  border-radius: 8px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  width: 50%;
+  justify-content: center;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+.bento2-wrapper .div8 { background-color: #ffffff; margin-right: auto; }
+.bento2-wrapper .div9 { background-color: #ffffff; }
+.bento2-wrapper .div10 { background-color: #ffffff; margin-left: auto; }
+.bento2-wrapper .icon {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* ===========================
+   IMAGES & LOGOS
+   =========================== */
+.bento2-wrapper .logo5D {
+  width: 100%;
   height: 100%;
-  box-shadow: #e0d2d2 0 0 4px 2px;
-  cursor: pointer;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
-.bento2-wrapper .div2 .stage .firstexperience:hover,
-.bento2-wrapper .div2 .stage .secondexperience:hover,
-.bento2-wrapper .div2 .stage .thirdexperience:hover {
-  box-shadow: #b7c2ce 0 0 4px 2px;
-}
-
+/* ===========================
+   MODAL
+   =========================== */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
-
 .bento2-wrapper .modal {
-    position: relative;
-    background-color: white;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 500px;
-    max-height: 80vh;
-    padding: 30px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  position: relative;
+  background-color: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
 .bento2-wrapper .modal .close-button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
 }
-
 .bento2-wrapper .modal .modal-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
 }
-
-.bento2-wrapper .modal .modal-content h3 
+.bento2-wrapper .modal .modal-content h3,
 .bento2-wrapper .modal .modal-content p {
-    margin: 0;
-    color: black;
+  margin: 0;
+  color: black;
 }
-
 .bento2-wrapper .modal .button-container {
-    margin-top: 10px;
+  margin-top: 10px;
+}
+.bento2-wrapper .modal .button {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 1px solid #000000;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
 }
 
-.bento2-wrapper .modal .button {
-    display: inline-block;
-    padding: 12px 25px;
-    border: 1px solid #000000;
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+@media screen and (max-width: 768px) {
+  .bento2-wrapper .parent {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+    padding: 8px;
+  }
+  .bento2-wrapper .div1 { grid-area: 4 / 5 / 7 / 7; }
+  .bento2-wrapper .div2 { grid-area: 7 / 4 / 11 / 7; }
+  .bento2-wrapper .div3 { grid-area: 7 / 1 / 11 / 4; }
+  .bento2-wrapper .div4 { grid-area: 1 / 1 / 5 / 4; }
+  .bento2-wrapper .div5 { grid-area: 5 / 1 / 7 / 5; }
+  .bento2-wrapper .div6 { grid-area: 1 / 4 / 4 / 7; }
+  .bento2-wrapper .div7 { grid-area: 11 / 1 / 13 / 7; }
+  .bento2-wrapper .parent > div { font-size: 14px; }
+  .bento2-wrapper .div8, 
+  .bento2-wrapper .div9, 
+  .bento2-wrapper .div10 { font-size: 10px; }
+}
+
+@media screen and (max-width: 480px) {
+  body, html {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .bento2-wrapper {
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 10px;
+  }
+  .bento2-wrapper .parent {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(19, 1fr);
+    gap: 6px;
+    padding: 6px;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+  }
+  .bento2-wrapper .div4 { grid-area: 1 / 1 / 5 / 4; }
+  .bento2-wrapper .div6 { grid-area: 5 / 1 / 7 / 4; }
+  .bento2-wrapper .div5 { grid-area: 7 / 1 / 9 / 4; }
+  .bento2-wrapper .div2 { grid-area: 9 / 1 / 12 / 4; }
+  .bento2-wrapper .div3 { grid-area: 12 / 1 / 15 / 4; }
+  .bento2-wrapper .div1 { grid-area: 15 / 1 / 17 / 4; }
+  .bento2-wrapper .div7 { grid-area: 17 / 1 / 19 / 4; }
+  .bento2-wrapper .div7 { flex-direction: row; gap: 3px; }
+  .bento2-wrapper .parent > div { font-size: 12px; }
+  .bento2-wrapper .div8, 
+  .bento2-wrapper .div9, 
+  .bento2-wrapper .div10 { font-size: 10px; }
 }
