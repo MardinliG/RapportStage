@@ -66,7 +66,7 @@ const Bento2 = () => {
                 </div>
                 <div className="div2">
                     <h2> Experiences </h2>
-                    <p className="about"> {experiences[1]?.contrat} - {experiences[0]?.name} </p>
+                    <p className="about"> {experiences[0]?.contrat} - {experiences[0]?.name} </p>
                     <div className="stage">
                         <div className="firstexperience" onClick={() => handleClick(experiences[0]?.link)}>
                             <img src={experiences[0]?.image} alt="Logo 5D" className="logo5D" />
