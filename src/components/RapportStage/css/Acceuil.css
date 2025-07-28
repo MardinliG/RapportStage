@@ -1,0 +1,15 @@
+.acceuil {
+    height: 100vh;
+    background-color: #023882;
+}
+
+.text {
+    color: white;
+    background-color: #023882;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

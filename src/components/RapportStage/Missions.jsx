@@ -1,13 +1,12 @@
 import React from "react";
+import './css/Missions.css';
 
-const Sommaire = () => {
+const Mission = () => {
     return (
-        <div className="sommaire">
-            <h1>Sommaire du Rapport de Stage</h1>
-            <p>Ce composant est en cours de développement.</p>
-            <p>Merci de revenir plus tard pour consulter le sommaire du rapport de stage.</p>
+        <div className="mission">
+            <h2>Mission Title</h2>
         </div>
     );
 }
 
-export default Sommaire;
+export default Mission;

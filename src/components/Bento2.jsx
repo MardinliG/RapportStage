@@ -7,7 +7,6 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import avatarImage from '/img/avatar.jpg';
-import logo5D from '/img/logo5D.jpg';
 
 
 const Bento2 = () => {

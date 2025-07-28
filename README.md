@@ -81,6 +81,8 @@ Conclusion
 Nom : Cinquième Dimension
 Lieu : Toulouse
 Durée du stage : [Ex. 8 semaines]
+Adresse
+Secteur : Informatique Developpement Web
 
 Présentation rapide :
 Cinquième Dimension est une agence web toulousaine spécialisée dans la création de sites internet (WordPress, Prestashop), le développement sur-mesure avec Symfony, et la maintenance technique de solutions numériques pour des entreprises variées. Elle propose aussi des outils métiers adaptés à des besoins spécifiques (intranet, CRM, portails clients…). L’équipe se compose de développeurs full stack, chefs de projets et designers UI/UX.
@@ -193,3 +195,4 @@ Ce stage m’a conforté dans mon choix de m’orienter vers le développement b
 
 Il a aussi changé ma façon d’aborder les nouvelles technologies : je sais maintenant que, même en partant de zéro, il est possible de progresser rapidement avec la bonne méthode et une attitude proactive.
 
+6. Remerciements

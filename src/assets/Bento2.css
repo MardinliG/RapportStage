@@ -401,18 +401,3 @@ body, html {
   .bento2-wrapper .div9, 
   .bento2-wrapper .div10 { font-size: 10px; }
 }
-
-.hover-contrat {
-  position: absolute;
-  background: #fff;
-  color: #222;
-  border-radius: 6px;
-  padding: 4px 10px;
-  font-size: 0.9em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  pointer-events: none;
-}
