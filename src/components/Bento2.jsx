@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import LoadingScreen from "./LoadingScreen";
 import { useNavigate } from "react-router-dom";
 import '../assets/Bento2.css';
 import { FaGithub } from "react-icons/fa";
@@ -18,7 +17,7 @@ const Bento2 = () => {
     const [currentWork, setCurrentWork] = useState(0);
     const [experiences, setExperiences] = useState([]);
     const apiUrl = import.meta.env.VITE_API_URL;
-    const [loading, setLoading] = useState(true);
+    const [hoveredExperience, setHoveredExperience] = useState(null);
 
     useEffect(() => {
         const MIN_LOADING_TIME = 1200;
@@ -31,13 +30,9 @@ const Bento2 = () => {
         .then(([worksData, experiencesData]) => {
             setWorks(worksData);
             setExperiences(experiencesData);
-            const elapsed = Date.now() - start;
-            const remaining = MIN_LOADING_TIME - elapsed;
-            setTimeout(() => setLoading(false), remaining > 0 ? remaining : 0);
         })
         .catch(err => {
             console.error(err);
-            setLoading(false);
         });
     }, []);
 
@@ -66,10 +61,6 @@ const Bento2 = () => {
         setModalVisible(false);
     };
 
-    if (loading) {
-        return <LoadingScreen />;
-    }   
-
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -89,15 +80,27 @@ const Bento2 = () => {
                 {/* ---------------------- DIV 2 EXPERIENCES ---------------------- */}
                 <div className="div2">
                     <h2> Experiences </h2>
-                    <p className="about"> {experiences[0]?.contrat} - {experiences[0]?.name} </p>
+                    <p className="about"> {experiences[hoveredExperience ?? 0]?.contrat} - {experiences[hoveredExperience ?? 0]?.name} </p>
                     <div className="stage">
-                        <div className="firstexperience" onClick={() => handleClick(experiences[0]?.link)}>
+                        <div className="firstexperience" 
+                        onClick={() => handleClick(experiences[0]?.link)}
+                        onMouseEnter={() => setHoveredExperience(0)}
+                        onMouseLeave={() => setHoveredExperience(null)}
+                        >
                             <img src={experiences[0]?.image} alt="Logo 5D" className="logo5D" />
                         </div>
-                        <div className="secondexperience" onClick={showModal}>
+                        <div className="secondexperience"
+                          onClick={showModal}
+                          onMouseEnter={() => setHoveredExperience(3)}
+                          onMouseLeave={() => setHoveredExperience(3)}
+                        >
                             <IoIosAdd size={32} />
                         </div>
-                        <div className="thirdexperience" onClick={showModal}>
+                        <div className="thirdexperience"
+                          onClick={showModal}
+                          onMouseEnter={() => setHoveredExperience(3)}
+                          onMouseLeave={() => setHoveredExperience(3)}
+                        >
                             <IoIosAdd size={32} />
                         </div>
                     </div>
@@ -179,7 +182,6 @@ const Bento2 = () => {
                         </div>
                     </div>
                 )}
-
             </div>
         </div>
     );

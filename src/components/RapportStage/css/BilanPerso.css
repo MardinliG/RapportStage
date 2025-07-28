@@ -1,0 +1,23 @@
+.bilan-perso {
+    background-color: #cc2727;
+    padding: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.bilan-perso .image {
+    background-color: #023882;
+    height: 100vh;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.bilan-perso .texte {
+    background-color: #fff;
+    height: 100vh;
+    flex: 1;
+    
+}

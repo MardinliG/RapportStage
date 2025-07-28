@@ -1,0 +1,52 @@
+.parent {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    grid-column-gap: 28px;
+    grid-row-gap: 0px;
+    background-color: #023882;
+    text-align: left;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 6; }
+.div2 { grid-area: 11 / 1 / 12 / 6; }
+.div3 { grid-area: 2 / 1 / 5 / 2; }
+.div4 { grid-area: 2 / 5 / 5 / 6; }
+.div5 { grid-area: 2 / 3 / 3 / 5; }
+.div6 { grid-area: 2 / 2 / 4 / 2; }
+.div7 { grid-area: 5 / 2 / 7 / 3; }
+.div8 { grid-area: 5 / 3 / 7 / 4; }
+.div9 { grid-area: 5 / 4 / 7 / 5; }
+.div10 { grid-area: 8 / 4 / 10 / 5; }
+.div11 { grid-area: 8 / 3 / 10 / 4; }
+.div12 { grid-area: 8 / 2 / 10 / 3; }
+
+.div1, .div2, .div3, .div4 {
+    height: 100%;
+    width: 100%;
+}
+.chapter-separator {
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    width: 100%; 
+    margin: 6px 0 8px 0; 
+}
+
+.div6, .div7, .div8, .div9, .div10, .div11, .div12 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.arrow {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    display: flex;
+    justify-content: end;
+}
+
+.chapter-title {
+    font-weight: bold;
+}
+
