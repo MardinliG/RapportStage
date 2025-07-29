@@ -1,9 +1,9 @@
 .mission {
     height: 100vh;
-    background-color: #023882;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: #023882;
 }

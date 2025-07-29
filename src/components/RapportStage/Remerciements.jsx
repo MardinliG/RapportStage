@@ -5,7 +5,7 @@ const Remerciements = () => {
     return (
         <div className="remerciements">
             <h2>Remerciements</h2>
-            <p>Je tiens à remercier toutes les personnes qui m'ont soutenu durant mon stage, en particulier mon tuteur de stage, mes collègues et ma famille.</p>
+            <p>Je tiens à remercier toute l'équipe de Cinquième Dimension pour son accueil, sa patience et ses conseils. Un remerciement particulier à Tony pour son accompagnement et sa confiance dans mes capacités d'apprentissage.</p>
         </div>
     );
 }

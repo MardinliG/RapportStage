@@ -7,3 +7,13 @@
     background-color: #023882;
     color: white;
 }
+
+.bilan {
+    display: flex;
+    flex-direction: row;
+}
+
+.learned, .liked, .difficulty {
+    display: flex;
+    flex-direction: column;
+}
