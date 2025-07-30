@@ -33,7 +33,7 @@ const BilanPerso = () => {
                     </div>
                     <div className="content">
                         <p> Le défi : Maîtriser Symfony sans base PHP solide  </p>
-                        <p> Comment : Projet test personnel + documentation + tutoriels  </p>
+                        <p> Comment : Projet découverte + documentation + tutoriels  </p>
                         <p> Résultat : Capacité d'auto-formation et confiance en mes capacités d'adaptation</p>
                     </div>
                 </div>

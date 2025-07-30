@@ -51,6 +51,17 @@
     font-weight: bold;
 }
 
+.arrow {
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+.div1, .div2, .div3, .div4, .div5 {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     .parent {
         height: auto; /* Permet au parent de grandir selon le contenu */
@@ -95,7 +106,7 @@
     .arrow {
         position: absolute;
         top: 8px;
-        right: 0 !important;
+        right: 0 ;
         margin-top: 0;
         justify-content: flex-end;
     }
@@ -104,14 +115,3 @@
     }
 }
 
-/* Pour toutes tailles d'écran, assure que .arrow est bien positionné */
-.arrow {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    display: flex;
-    justify-content: flex-end;
-}
-.div1, .div2, .div3, .div4, .div5 {
-    display: none;
-}
