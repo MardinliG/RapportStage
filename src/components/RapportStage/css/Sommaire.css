@@ -85,7 +85,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: none;
         grid-row-gap: 12px;
-        padding: 8px;
+        padding: 0 0 0px 8px;
     }
     .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10, .div11, .div12 {
         grid-area: unset;
@@ -95,7 +95,7 @@
     .arrow {
         position: absolute;
         top: 8px;
-        right: 8px;
+        right: 0 !important;
         margin-top: 0;
         justify-content: flex-end;
     }
@@ -115,4 +115,3 @@
 .div1, .div2, .div3, .div4, .div5 {
     display: none;
 }
-

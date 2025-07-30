@@ -1,9 +1,42 @@
 .mission {
-    height: 100vh;
-    background-color: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #023882;
+    flex-direction: column;
+    background-color: #023882;
+    color: white;
+    padding: 20px;
+}
+
+.missions {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; 
+    gap: 10px;
+}
+
+.mission-block {
+    flex: 1;
+    min-width: 0;
+    border-right: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mission-block:last-child {
+    border-right: none;
+}
+
+@media (max-width: 900px) {
+    .missions {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .mission-block {
+        border-right: none;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 16px;
+    }
+    .mission-block:last-child {
+        border-bottom: none;
+    }
 }

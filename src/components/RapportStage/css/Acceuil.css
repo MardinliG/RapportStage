@@ -1,3 +1,7 @@
+.acceuil, .text {
+    box-sizing: border-box;
+}
+
 .acceuil {
     height: 100vh;
     background-color: #023882;
@@ -12,4 +16,23 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .acceuil, .text {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .acceuil, .text {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        min-width: 0;
+    }
 }

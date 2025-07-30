@@ -3,17 +3,56 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #023882;
     color: white;
+    padding: 20px;
 }
 
 .bilan {
     display: flex;
     flex-direction: row;
+    align-items: stretch; /* Pour que tous les blocs aient la même hauteur */
+    gap: 10px;
+    width: 100%;
+    max-width: 1100px;
+    margin-top: 30px;
 }
 
 .learned, .liked, .difficulty {
+    flex: 1;
+    min-width: 0;
+    border-right: 1px solid #fff;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    padding: 16px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.difficulty {
+    border-right: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .bilan {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .learned, .liked, .difficulty {
+        border-right: none;
+        border-bottom: 1px solid #fff;
+    }
+    .difficulty {
+        border-bottom: none;
+    }
+}
+
+.bilan-perso h1 {
+    align-self: flex-start;
+    text-align: left;
+    width: 100%;
+    margin-left: 0;
 }

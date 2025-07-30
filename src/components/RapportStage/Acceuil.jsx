@@ -10,8 +10,7 @@ const Acceuil = () => {
                 <p> Mardinli Guillaume </p>
                 <p> 2025 </p>
                 <p> Bachelor Informatique - Ynov Toulouse </p>
-                <p> Toulouse </p>
-                <p> 23 juin - 4 août 2025 (6 semaines) </p>
+                <p> 23 juin - 4 août 2025 </p>
             </div>
         </div>
     );
