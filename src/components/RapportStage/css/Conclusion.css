@@ -29,7 +29,9 @@
 }
 
 
-
+.mobile-break {
+  display: none;
+}
 
 
 @media (max-width: 900px) {
@@ -81,5 +83,9 @@
     margin: 0;
     padding: 0;
     text-align: left;
+  }
+
+  .mobile-break {
+  display: inline;
   }
 }
