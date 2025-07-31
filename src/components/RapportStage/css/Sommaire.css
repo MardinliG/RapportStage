@@ -114,4 +114,10 @@
         font-size: 1.1em;
     }
 }
+.parent a.div6, .parent a.div7, .parent a.div8, .parent a.div9,
+.parent a.div10, .parent a.div11, .parent a.div12 {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
 

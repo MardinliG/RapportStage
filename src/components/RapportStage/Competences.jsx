@@ -14,7 +14,7 @@ import { SiXampp } from "react-icons/si";
 
 const Competences = () => {
     return (
-        <div className="skills">
+        <div className="skills" id="competences">
             <div className="skills-title">
                 <h2>Compétences mobilisées</h2>
             </div>

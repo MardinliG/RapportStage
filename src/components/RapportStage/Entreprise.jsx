@@ -3,7 +3,7 @@ import './css/Entreprise.css';
 
 const Entreprise = () => {
     return (
-        <div className="entreprise">
+        <div className="entreprise" id="entreprise">
             <div className="image-container">
                 <div className="test">
                     <img src="/img/logo5D.jpg" alt="Logo" />

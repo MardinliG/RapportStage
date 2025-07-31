@@ -3,7 +3,7 @@ import './css/BilanPerso.css';
 
 const BilanPerso = () => {
     return (
-        <div className="bilan-perso">
+        <div className="bilan-perso" id="bilan-perso">
             <h1> Bilan Personnel </h1>
             <div className="bilan">
                 <div className="learned">

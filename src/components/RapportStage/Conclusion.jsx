@@ -3,7 +3,7 @@ import './css/Conclusion.css';
 
 const Conclusion = () => {
   return (
-    <div className="conclusion">
+    <div className="conclusion" id="conclusion">
       <h1 className="conclusion-title">Conclusion</h1>
       <p className="conclusion-text">
         Ce stage m'a confirmé mon orientation vers le développement web.  <span className="mobile-break"><br /><br /> </span>

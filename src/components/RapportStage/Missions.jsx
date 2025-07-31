@@ -3,7 +3,7 @@ import './css/Missions.css';
 
 const Mission = () => {
     return (
-        <div className="mission">
+        <div className="mission" id="mission">
             <div className="title">
                 <h1>Missions</h1>
             </div>
