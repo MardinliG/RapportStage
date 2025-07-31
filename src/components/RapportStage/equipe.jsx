@@ -14,7 +14,7 @@ const teamMember = [
 ];
 
 const Equipe = () => {
-  return (
+  return ( 
     <div className="equipe">
         <div className="title">
             <h1>L'Équipe</h1>
