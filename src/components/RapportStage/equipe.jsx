@@ -6,7 +6,7 @@ const teamMember = [
     { name: "Marjorie", role: "Chef de projets", photo: "/img/equipe/marjorie.jpg" },
     { name: "Gwenaëlle", role: "Responsable Pôle Digital", photo: "/img/equipe/gwenaelle.png" },
     { name: "Aurélie", role: "Graphiste", photo: "/img/equipe/aurelie.png" },
-    { name: "Tony", role: "Développeur", photo: "/img/equipe/tony.png"},
+    { name: "Tony (Tuteur)", role: "Développeur", photo: "/img/equipe/tony.png"},
     { name: "Fares", role: "Développeur", photo: "/img/equipe/fares.jpg" },
     { name: "Mia", role: "Responsable des réseaux sociaux", photo: "/img/equipe/mia.jpg" },
     { name: "Lorenzo", role: "Responsable des réseaux sociaux", photo: "/img/equipe/lorenzo.jpg" },

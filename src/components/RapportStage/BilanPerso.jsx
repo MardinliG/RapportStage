@@ -10,7 +10,7 @@ const BilanPerso = () => {
                     <div className="title">
                     <h2> Ce que j'ai appris </h2>
                     </div>
-                    <div className="content">
+                    <div className="summary">
                         <p> Architecture MVC complète avec Symfony  </p>
                         <p> Gestion BDD avec Doctrine + MySQL  </p>
                         <p> Débogage en environnement réel  </p>
@@ -21,7 +21,7 @@ const BilanPerso = () => {
                     <div className="title">
                     <h2> Ce que j'ai aimé </h2>
                     </div>
-                    <div className="content">
+                    <div className="summary">
                         <p> Variété des projets : maintenance, e-commerce, développement sur-mesure</p>
                         <p> Courbe d'apprentissage intense de Symfony</p>
                         <p> Environnement bienveillant pour progresser</p>
@@ -31,7 +31,7 @@ const BilanPerso = () => {
                     <div className="title">
                         <h2> Difficulté surmontée </h2>
                     </div>
-                    <div className="content">
+                    <div className="summary">
                         <p> Le défi : Maîtriser Symfony sans base PHP solide  </p>
                         <p> Comment : Projet découverte + documentation + tutoriels  </p>
                         <p> Résultat : Capacité d'auto-formation et confiance en mes capacités d'adaptation</p>
