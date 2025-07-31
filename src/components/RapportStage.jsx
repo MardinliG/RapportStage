@@ -2,7 +2,7 @@ import React from "react";
 import '../assets/RapportStage.css';
 import Acceuil from "./RapportStage/Acceuil";
 import Sommaire from './RapportStage/Sommaire';
-import Equipe from "./RapportStage/equipe";
+import Equipe from "./RapportStage/Equipe";
 import Entreprise from './RapportStage/Entreprise';
 import Mission from "./RapportStage/Missions";
 import Competences from "./RapportStage/Competences";

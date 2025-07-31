@@ -1,5 +1,5 @@
 import React from "react";
-import './css/equipe.css';
+import './css/Equipe.css';
 
 const teamMember = [
     { name: "Bruno", role: "Directeur de projets", photo: "/img/equipe/bruno.jpg" },
