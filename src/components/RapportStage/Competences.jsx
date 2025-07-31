@@ -52,13 +52,13 @@ const Competences = () => {
                     </div>  
                 </div>
 
-                {/* SECTION TRANSVERSALE EN TEXTE */}
+                
                 <div className="skills-section">
                     <div className="skills-list">
                         <p><strong>Autonomie</strong> : Auto-formation rapide via documentation officielle</p>
                         <p><strong>Adaptabilité</strong> : Passage de WordPress à Symfony sans base préalable</p>
                         <p><strong>Communication</strong> : Échanges clairs avec l'équipe pour comprendre les projets</p>
-                        <p><strong>Rigueur</strong> : Lecture de code existant, respect des conventions, tests</p>
+                        <p><strong>Rigueur</strong> : Lecture de code existant, respect des conventions, tests unitaires</p>
                     </div>
                 </div>
             </div>

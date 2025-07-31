@@ -1,6 +1,45 @@
 .conclusion {
-    background-color: #023882;
-    padding: 20px;
-    min-height: 100vh;
-    color: white;
+  background-color: #023882;
+  color: white;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.conclusion-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.conclusion-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.conclusion-heading {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.conclusion-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.conclusion-list {
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+@media (max-width: 900px) {
+  .conclusion-list {
+    margin-left: 0px;
+  }
 }

@@ -21,8 +21,8 @@
 }
 
 .texte {
-    text-align: right;
-    align-items: flex-end;
+    text-align: left;
+    align-items: flex-start;
     padding-right: 20px;
     justify-content: center;
     display: flex;
