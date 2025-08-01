@@ -8,6 +8,23 @@ import { IoIosAdd } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import avatarImage from '/img/avatar.jpg';
 
+import { FaReact } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { FaPhp } from "react-icons/fa";
+import { FaSymfony } from "react-icons/fa";
+import { SiSupabase } from "react-icons/si";
+import { SiVite } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { FaPython } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
+import { FaTrello } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa";
+
+import { FaWordpressSimple } from "react-icons/fa";
+
+
+
 
 const Bento2 = () => {
     const navigate = useNavigate();
@@ -70,9 +87,45 @@ const Bento2 = () => {
 
                 {/* ---------------------- DIV 1 INTERESTED ---------------------- */}
                 <div className="div1">
-                    <h2>You are <br /> interested ?</h2>
-                    <div className="button-container">
-                        <a href="mailto:guillaume.mardinli@ynov.com" className="button">Contact Me !</a>
+                    <div className="grid-containers">
+                        <div className="grid-items it1">
+                            <FaReact  size={32}/>
+                        </div>
+                        <div className="grid-items it2">
+                            <RiTailwindCssFill size={32}/>
+                        </div>
+                        <div className="grid-items it3">
+                            <FaPhp size={32}/>
+                        </div>
+                        <div className="grid-items it4">
+                            <FaSymfony size={32}/>
+                        </div>
+
+                        <div className="grid-items it5">
+                            <SiSupabase size={32}/>
+                        </div>
+                        <div className="grid-items it6">
+                            <SiVite size={32}/>
+                        </div>
+                        <div className="grid-items it7">
+                            <SiMysql size={32}/>
+                        </div>
+                        <div className="grid-items it8">
+                            <SiNextdotjs size={32}/>
+                        </div>
+
+                        <div className="grid-items it9">
+                            <FaPython size={32}/>
+                        </div>
+                        <div className="grid-items it10">
+                            <FaJava size={32}/>
+                        </div>
+                        <div className="grid-items it11">
+                            <FaTrello size={32}/>
+                        </div>
+                        <div className="grid-items it12">
+                            <FaGitAlt size={32}/>
+                        </div>
                     </div>
                 </div>
 
@@ -153,14 +206,22 @@ const Bento2 = () => {
 
                 {/* ---------------------- DIV 7 SOCIAL ICONS ---------------------- */}
                 <div className="div7">
-                    <div className="div8">
-                        <a href="https://github.com/MardinliG" className="icon" target="_blank"> <FaGithub size={32} /> </a>
-                    </div>
-                    <div className="div9">
-                        <a href="mailto:guillaume.mardinli@ynov.com" className="icon"> <CiMail size={32} /> </a>
-                    </div>
-                    <div className="div10">
-                        <a href="https://fr.linkedin.com/in/guillaume-mardinli-1212b1269" className="icon" target="_blank"> <FaLinkedinIn size={32} /> </a>
+                    {/*
+                    <a href="mailto:guillaume.mardinli@ynov.com" className="button-container">
+                        <div className="button-container">Contact Me !</div>
+                    </a>
+                    <a href="https://github.com/MardinliG" className="github" target="_blank">
+                        <div className="button-container">
+                            <FaGithub size={32} />
+                        </div>
+                    </a> */}
+                    <div className="grid-stack">
+                        <div className="stack it1">
+                            <div className="button-container">Contact Me !</div>
+                        </div>
+                        <div className="stack it2">
+                            <FaGithub size={32} />
+                        </div>
                     </div>
                 </div>
 
