@@ -7,6 +7,9 @@ const Mission = () => {
             <div className="title">
                 <h1>Missions</h1>
             </div>
+            <div className="mission-intro">
+                <p>Intégré à l’équipe en tant que stagiaire développeur, j’ai eu l’opportunité de participer à différentes missions couvrant plusieurs technologies et types de projets.</p>
+            </div>
             <div className="missions">
                 <div className="mission-block">
                     <div className="mission-title">
@@ -48,7 +51,15 @@ const Mission = () => {
                     </div>
                 </div>
             </div>
+        <div className="integration-title">
+            <h3>🔗 <strong>Intégration</strong></h3>
         </div>
+        <div className="integration-content">
+            <p>Mon intégration dans l'équipe s'est faite de manière progressive et collaborative. Rattaché hiérarchiquement à Tony, j'ai néanmoins interagi avec l'ensemble des membres de l'équipe selon les besoins des projets. <span className="mobile-break"></span> Les chefs de projets me briefaient sur les attentes clients, les autres développeurs partageaient leurs expériences techniques, et les designers m'aidaient à comprendre les enjeux d'interface utilisateur.</p>
+            <p>Les méthodes de travail en équipe s'appuyaient sur des outils collaboratifs modernes : Trello et Jira pour la gestion des tâches et le suivi des projets, Bitbucket pour le versioning du code avec Git, et des réunions quotidiennes courtes pour synchroniser les activités de chacun.</p>
+        </div>
+    </div>
+
     );
 }
 

@@ -86,6 +86,8 @@
   }
 
   .mobile-break {
-  display: inline;
+  display: block;
+  height: 12px;
+  width: 100%;
   }
 }

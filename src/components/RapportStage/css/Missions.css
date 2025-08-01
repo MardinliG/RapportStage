@@ -4,6 +4,7 @@
     background-color: #023882;
     color: white;
     padding: 20px;
+    height: auto;
 }
 
 .missions {
@@ -24,6 +25,10 @@
 
 .mission-block:last-child {
     border-right: none;
+}
+
+.mission-intro {
+    margin-bottom: 20px;
 }
 
 @media (max-width: 900px) {

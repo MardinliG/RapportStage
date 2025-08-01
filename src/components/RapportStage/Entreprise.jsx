@@ -14,10 +14,7 @@ const Entreprise = () => {
                     <h2> Cinquième Dimension </h2>
                     <p><span className="bold">Adresse :</span> 123 Rue de l'Innovation, 31000 Toulouse </p>
                     <p><span className="bold">Secteur :</span> Développement web et solutions numériques </p>
-                    <p><span className="bold">Présentation :</span> Cinquième Dimension est une agence web toulousaine spécialisée dans la création de sites internet (WordPress, Prestashop), le développement sur-mesure avec Symfony, et la maintenance technique de solutions numériques pour des entreprises variées. Elle propose aussi des outils métiers adaptés à des besoins spécifiques (intranet, CRM, portails clients…). L’équipe se compose de développeurs full stack, chefs de projets et designers UI/UX. </p>
-                </div>
-                <div className="team">
-                    <p><span className="bold">Équipe :</span> Développeurs full stack, chefs de projets, designers UI/UX</p>
+                    <p><span className="bold">Présentation :</span> Cinquième Dimension est une agence web toulousaine qui s'est spécialisée dans l'écosystème du développement web et des solutions numériques sur-mesure.<span className="mobile-break"></span> L'entreprise accompagne ses clients dans leur transformation digitale en proposant une gamme complète de services : création de sites internet avec des CMS comme WordPress et PrestaShop, développement d'applications web personnalisées utilisant le framework Symfony. </p>
                 </div>
             </div>
         </div>

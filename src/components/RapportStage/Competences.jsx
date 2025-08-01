@@ -55,14 +55,16 @@ const Competences = () => {
                 
                 <div className="skills-section">
                     <div className="skills-list">
-                        <p><strong>Autonomie</strong> : Auto-formation rapide via documentation officielle</p>
-                        <p><strong>Adaptabilité</strong> : Passage de WordPress à Symfony sans base préalable</p>
-                        <p><strong>Communication</strong> : Échanges clairs avec l'équipe pour comprendre les projets</p>
-                        <p><strong>Rigueur</strong> : Lecture de code existant, respect des conventions, tests unitaires</p>
-                    </div>
+                        <h3>Autonomie et auto-formation</h3>
+                        <p>Ma capacité d'apprentissage autonome s'est considérablement développée durant ce stage. Face à Symfony, une technologie que je ne maîtrisais pas, j'ai mis en place une méthodologie d'auto-formation efficace : consultation de la documentation officielle, réalisation d'exercices pratiques, et recherche de solutions à des problèmes concrets. Cette approche m'a permis de devenir opérationnel rapidement sur des projets clients réels.</p>
+                        <h3> Communication professionnelle </h3>
+                        <p>Les interactions quotidiennes avec l'équipe ont développé mes compétences communicationnelles dans un contexte professionnel. J'ai appris à poser les bonnes questions techniques, à présenter clairement l'avancement de mes travaux, et à demander de l'aide de manière constructive quand nécessaire.</p>
+                        <h3> Rigueur et méthodologie </h3>
+                        <p>Le travail sur du code existant en production m'a inculqué une rigueur particulière : lecture approfondie du code avant toute modification, respect strict des conventions établies, tests systématiques avant mise en production, et documentation des modifications apportées.</p>
                 </div>
             </div>
         </div>
+    </div>
     );
 }
 
