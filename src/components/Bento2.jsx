@@ -7,6 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { IoIosAdd } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import avatarImage from '/img/avatar.jpg';
+import guillaumeImage from '/img/guillaume.jpg';
 
 
 const Bento2 = () => {
@@ -128,7 +129,7 @@ const Bento2 = () => {
                         {works.length > 0 && (
                             <img
                                 src={works[currentWork].image}
-                                alt={works[currentWork].name}
+                                alt={works[currentWork].image}
                                 style={{
                                     width: "120px",
                                     borderRadius: "12px"
@@ -140,7 +141,7 @@ const Bento2 = () => {
 
                 {/* ---------------------- DIV 4 AVATAR ---------------------- */}
                 <div className="div4">
-                    <img src={avatarImage} alt="Avatar" className="avatar"/>
+                    <img src={guillaumeImage} alt="Avatar" className="avatar"/>
                 </div>
 
                 {/* ---------------------- DIV 5 ABOUT ME ---------------------- */}
