@@ -71,9 +71,13 @@ const Bento2 = () => {
                 {/* ---------------------- DIV 1 INTERESTED ---------------------- */}
                 <div className="div1">
                     <h2>You are <br /> interested ?</h2>
+                    <div className="cv">
+                        <a href="/img/cv/CV_Mardinli_Guillaume.pdf" target="_blank" className="cv_button">My Resume</a>
+                    </div>
                     <div className="button-container">
                         <a href="mailto:guillaume.mardinli@ynov.com" className="button">Contact Me !</a>
                     </div>
+                    
                 </div>
 
                 {/* ---------------------- DIV 2 EXPERIENCES ---------------------- */}
